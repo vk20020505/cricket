@@ -1,73 +1,74 @@
 import 'package:cricket/screens/live.dart';
 import 'package:flutter/material.dart';
-
-class Screen1 extends StatefulWidget {
-  const Screen1({super.key});
+class Home extends StatefulWidget {
+  const Home({super.key});
 
   @override
-  State<Screen1> createState() => _Screen1State();
+  State<Home> createState() => _HomeState();
 }
-
-class _Screen1State extends State<Screen1> {
-  //  var w = MediaQuery.sizeOf(context).width;
+class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
-    
     return DefaultTabController(
-      length: 6,
+      length: 5,
       child: Scaffold(
+        backgroundColor: Colors.white.withOpacity(0.8),
         appBar: AppBar(
-          leading: IconButton(
-              onPressed: () {}, icon: const Icon(Icons.arrow_back_outlined)),
-          title: const Text("SL vs PAK"),
+          toolbarHeight: 50,
+          title: Text(
+            'SL vs PAK',
+            style: TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.normal),
+          ),
           centerTitle: true,
-          actions: [
-            IconButton(onPressed: () {}, icon: const Icon(Icons.pin_end)),
-            // IconButton(onPressed: () {}, icon: const Icon(Icons.more_vert))
-          ],
-          bottom: const TabBar(
+          flexibleSpace: Container(
+            decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                colors: <Color>[
+                  Color(0xff8015b1),
+                  Color(0xff450da1),
+                ],
+                begin: Alignment.centerRight,
+                end: Alignment.centerLeft,
+              ),
+            ),
+          ),
+          leading: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: Icon(
+              Icons.arrow_back,
+              size: 16,
+            ),
+            //replace with our own icon data.
+          ),
+          bottom: TabBar(
+            isScrollable: true,
+            indicatorColor: Colors.white,
             tabs: [
               Tab(
-                child: Text(
-                  "Live",
-                  style: TextStyle(fontSize: 20),
-                ),
+                text: ("Live"),
               ),
               Tab(
-                child: Text(
-                  "Info",
-                  style: TextStyle(fontSize: 20),
-                ),
+                text: ("Info"),
               ),
               Tab(
-                child: Text(
-                  "Commentary",
-                  style: TextStyle(fontSize: 20),
-                ),
+                text: ("Commentary"),
               ),
               Tab(
-                child: Text(
-                  "Scorecard",
-                  style: TextStyle(fontSize: 20),
-                ),
+                text: ("Scorecard"),
               ),
               Tab(
-                child: Text(
-                  "Chat",
-                  style: TextStyle(fontSize: 20),
-                ),
-              ),
-              Tab(
-                child: Text(
-                  "History",
-                  style: TextStyle(fontSize: 20),
-                ),
+                text: ("History"),
               ),
             ],
-            isScrollable: true,
           ),
+          actions: [
+            IconButton(onPressed: (){}, icon: Icon(Icons.more_vert_outlined,color: Colors.white,))
+          ],
         ),
-       
         body:  TabBarView(children: [
          live(),
           const Center(
