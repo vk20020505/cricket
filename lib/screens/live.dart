@@ -16,7 +16,8 @@ Widget live() {
               width: double.infinity,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(5), color: Colors.white),
-              child: Column(
+              child:
+              Column(
                 children: [
                   Container(
                       height: 30,
@@ -212,7 +213,8 @@ Widget live() {
             child: Container(
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(5), color: Colors.white),
-              child: Column(children: [
+              child:
+              Column(children: [
                 Container(
                     padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 8),
                     child: Table(

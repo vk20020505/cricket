@@ -1,4 +1,5 @@
 import 'package:cricket/screens/live.dart';
+import 'package:cricket/screens/scorecard.dart';
 import 'package:flutter/material.dart';
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -77,9 +78,7 @@ class _HomeState extends State<Home> {
           const Center(
             child: Text("Commentary"),
           ),
-          const Center(
-            child: Text("Scorecard"),
-          ),
+          Scorecard(),
           const Center(
             child: Text("Chat"),
           ),
