@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:marquee/marquee.dart';
-
 Widget live() {
   return
     ListView(
@@ -329,7 +328,7 @@ Widget live() {
               Container(
                 padding: const EdgeInsets.all(10),
                 child:  Text(
-                  " Lashith Malinga,Lashith Malinga,Lashith Malinga,Lashith ",
+                  "Lashith Malinga,Lashith Malinga, ",
                   maxLines: 2,
                   textAlign: TextAlign.start,
                   style: TextStyle(fontSize: 14,fontStyle: FontStyle.normal, ),
@@ -341,161 +340,183 @@ Widget live() {
         const SizedBox(
           height: 10,
         ),
-        Container(
-          height: 110,
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10), color: Colors.white),
-          child:
-              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            Container(
-              padding: const EdgeInsets.all(10),
-              child:
-                  const Text("Last 24 Balls", style: TextStyle(fontSize: 20)),
-            ),
-            const Divider(
-              height: 0,
-              thickness: 2,
-            ),
-            Container(
-                padding: const EdgeInsets.all(10), child: const Text("jhfds"))
-          ]),
+        Card(
+          elevation: 2.0,
+          shadowColor: Colors.deepPurple.withOpacity(0.2),
+          child: Container(
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(5), color: Colors.white),
+            child:
+            Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 8),
+                child: const Text("Yet to bat",
+                  style: TextStyle(fontSize: 16,color: Colors.deepPurple,fontWeight: FontWeight.bold),
+                ),
+              ),
+              Divider(
+                thickness: 1,
+                indent: 10,
+                endIndent: 10,
+                color: Colors.deepPurple.withOpacity(0.4),
+              ),
+              Container(
+                padding: const EdgeInsets.all(10),
+                child:  Text(
+                  "Lashith Malinga,Lashith Malinga, ",
+                  maxLines: 2,
+                  textAlign: TextAlign.start,
+                  style: TextStyle(fontSize: 14,fontStyle: FontStyle.normal, ),
+                ),
+              )
+            ]),
+          ),
         ),
         const SizedBox(
           height: 10,
         ),
-        Container(
-          height: 120,
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10), color: Colors.white),
-          padding: const EdgeInsets.all(10),
-          child: Column(children: [
-            Table(
-              columnWidths: const {
-                0: FlexColumnWidth(4),
-                1: FlexColumnWidth(3),
-              },
-              children: [
-                TableRow(children: [
-                  const Row(
-                    children: [
-                      Text(
-                        "Team Review - UDRS",
-                        style: TextStyle(fontSize: 17),
+        Card(
+          elevation: 3.0,
+          shadowColor: Colors.deepPurple.withOpacity(0.4),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 8),
+            child: Container(
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(5), color: Colors.white),
+              child: Column(children: [
+                Table(
+                  columnWidths: const {
+                    0: FlexColumnWidth(4),
+                    1: FlexColumnWidth(3),
+                  },
+                  children: [
+                    TableRow(children: [
+                      const Row(
+                        children: [
+                          Text(
+                            "Team Review ",
+                              style: TextStyle(fontSize: 16,color: Colors.deepPurple,fontWeight: FontWeight.bold)                          ),
+                          Icon(Icons.info_outline,size: 15,color: Colors.deepPurple,)
+                        ],
                       ),
-                      Icon(Icons.info_outline)
+                      Table(
+                        children: const [
+                          TableRow(children: [
+                            TableCell(
+                                child: Text(
+                              "Left",
+                                    style: TextStyle(fontSize: 16,color: Colors.deepPurple,fontWeight: FontWeight.bold)                            )),
+                            TableCell(
+                                child: Text(
+                              "W",
+                                    style: TextStyle(fontSize: 16,color: Colors.deepPurple,fontWeight: FontWeight.bold)                            )),
+                            TableCell(
+                                child: Text(
+                              "R",
+                                    style: TextStyle(fontSize: 16,color: Colors.deepPurple,fontWeight: FontWeight.bold)                            ))
+                          ])
+                        ],
+                      )
+                    ])
+                  ],
+                ),
+                Divider(
+                  thickness: 1,
+                  indent: 0,
+                  endIndent: 0,
+                  color: Colors.deepPurple.withOpacity(0.4),
+                ),
+                Container(
+                  padding: const EdgeInsets.all(5),
+                  child: Table(
+                    columnWidths: const {
+                      0: FlexColumnWidth(4),
+                      1: FlexColumnWidth(3),
+                    },
+                    children: [
+                      TableRow(children: [
+                        const SizedBox(
+                          height: 30,
+                          child: TableCell(
+                              child: Text(
+                            "ENG",
+                                style: TextStyle(fontSize: 15,fontStyle: FontStyle.normal, ),
+                          )),
+                        ),
+                        Table(
+                          children: const [
+                            TableRow(children: [
+                              TableCell(
+                                  child: Text(
+                                "18",
+                                    style: TextStyle(fontSize: 15,fontStyle: FontStyle.normal, ),
+                              )),
+                              TableCell(
+                                  child: Text(
+                                "33",
+                                    style: TextStyle(fontSize: 15,fontStyle: FontStyle.normal, ),
+                              )),
+                              TableCell(
+                                  child: Text(
+                                "22",
+                                    style: TextStyle(fontSize: 15,fontStyle: FontStyle.normal, ),
+                              ))
+                            ])
+                          ],
+                        )
+                      ]),
+                      TableRow(children: [
+                        const TableCell(
+                            child: Text(
+                          "AUS",
+                              style: TextStyle(fontSize: 15,fontStyle: FontStyle.normal, ),
+                        )),
+                        Table(
+                          children: const [
+                            TableRow(children: [
+                              TableCell(
+                                  child: Text(
+                                "18",
+                                    style: TextStyle(fontSize: 15,fontStyle: FontStyle.normal, ),
+                              )),
+                              TableCell(
+                                  child: Text(
+                                "33",
+                                    style: TextStyle(fontSize: 15,fontStyle: FontStyle.normal, ),
+                              )),
+                              TableCell(
+                                  child: Text(
+                                "22",
+                                    style: TextStyle(fontSize: 15,fontStyle: FontStyle.normal, ),
+                              ))
+                            ])
+                          ],
+                        )
+                      ]),
                     ],
                   ),
-                  Table(
-                    children: const [
-                      TableRow(children: [
-                        TableCell(
-                            child: Text(
-                          "Left",
-                          style: TextStyle(fontSize: 17),
-                        )),
-                        TableCell(
-                            child: Text(
-                          "W",
-                          style: TextStyle(fontSize: 17),
-                        )),
-                        TableCell(
-                            child: Text(
-                          "R",
-                          style: TextStyle(fontSize: 17),
-                        ))
-                      ])
-                    ],
-                  )
-                ])
-              ],
+                ),
+              ]),
             ),
-            const Divider(
-              thickness: 2,
-            ),
-            Container(
-              padding: const EdgeInsets.all(5),
-              child: Table(
-                columnWidths: const {
-                  0: FlexColumnWidth(4),
-                  1: FlexColumnWidth(3),
-                },
-                children: [
-                  TableRow(children: [
-                    const SizedBox(
-                      height: 30,
-                      child: TableCell(
-                          child: Text(
-                        "ENG",
-                        style: TextStyle(fontSize: 17),
-                      )),
-                    ),
-                    Table(
-                      children: const [
-                        TableRow(children: [
-                          TableCell(
-                              child: Text(
-                            "18",
-                            style: TextStyle(fontSize: 17),
-                          )),
-                          TableCell(
-                              child: Text(
-                            "33",
-                            style: TextStyle(fontSize: 17),
-                          )),
-                          TableCell(
-                              child: Text(
-                            "22",
-                            style: TextStyle(fontSize: 17),
-                          ))
-                        ])
-                      ],
-                    )
-                  ]),
-                  TableRow(children: [
-                    const TableCell(
-                        child: Text(
-                      "AUS",
-                      style: TextStyle(fontSize: 17),
-                    )),
-                    Table(
-                      children: const [
-                        TableRow(children: [
-                          TableCell(
-                              child: Text(
-                            "18",
-                            style: TextStyle(fontSize: 17),
-                          )),
-                          TableCell(
-                              child: Text(
-                            "33",
-                            style: TextStyle(fontSize: 17),
-                          )),
-                          TableCell(
-                              child: Text(
-                            "22",
-                            style: TextStyle(fontSize: 17),
-                          ))
-                        ])
-                      ],
-                    )
-                  ]),
-                ],
-              ),
-            ),
-          ]),
+          ),
         ),
         const SizedBox(height: 10),
-        Container(
-          height: 50,
-          padding: EdgeInsets.all(10),
-          decoration: BoxDecoration(borderRadius: BorderRadius.circular(10), color: Colors.white),
-            child: Marquee(
-              blankSpace: 50,
-              velocity: 20,
-            textDirection: TextDirection.ltr,
-            text:'Thank you for using Sports Prince',style: TextStyle(color: Colors.purple,fontSize: 14,fontWeight: FontWeight.w400),
+        Card(
+          elevation: 3.0,
+          shadowColor: Colors.deepPurple.withOpacity(0.4),
+          child: Container(
+            height: 50,
+            padding: EdgeInsets.all(10),
+            decoration: BoxDecoration(borderRadius: BorderRadius.circular(10), color: Colors.white),
+              child: Marquee(
+                blankSpace: 100,
+                velocity: 20,
+              textDirection: TextDirection.ltr,
+              text:'Thank you for using Sports Prince',style: TextStyle(color: Colors.deepPurple,fontSize: 15,fontWeight: FontWeight.bold),
+            ),
           ),
-        )
+        ),
+         SizedBox(height: 10),
       ]
     );
 }
