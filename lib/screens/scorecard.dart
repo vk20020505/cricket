@@ -7,9 +7,98 @@ Widget Scorecard() {
     physics: BouncingScrollPhysics(),
     padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 8),
     children: [
+      Container(
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Row(
+            children: [
+              Expanded(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment
+                      .center,
+                  children: [
+                    CircleAvatar(
+                      backgroundColor:Colors.white,
+                      radius: 20,
+                    ),
+                  ],
+                ),
+              ),
+              Expanded(
+                child: Container(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment
+                        .center,
+                    crossAxisAlignment: CrossAxisAlignment
+                        .start,
+                    children:
+                    [
+                      Text('AUS', style: TextStyle(
+                          color: Colors.deepPurple,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 16),),
+                    ],
+                  ),
+                ),
+              ),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment
+                      .center,
+                  mainAxisAlignment: MainAxisAlignment
+                      .center,
+                  children: [
+                    Text(
+                      'V/S',
+                      style: TextStyle(
+                          color: Colors.purple,
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Expanded(
+                child: Container(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment
+                        .center,
+                    children: [
+                      Text('ENG', style: TextStyle(
+                          color: Colors.deepPurple,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 16),),
+                    ],
+                  ),
+                ),
+              ),
+              Expanded(
+                child:
+                Column(
+                  mainAxisAlignment: MainAxisAlignment
+                      .center,
+                  children: [
+                    CircleAvatar(
+                      radius: 20,
+                      backgroundColor:Colors.white,
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
       Card(
         child: ExpansionTile(
-          title: Text('Durban Qalandars',style: TextStyle(color: Colors.black),),
+          title: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text('Durban Qalandars',style: TextStyle(color: Colors.black),),
+              Text('283-10(54.4)',style: TextStyle(color: Colors.black),),
+            ],
+          ),
            children: [
               Container(
                   height: 30,
@@ -566,7 +655,13 @@ Widget Scorecard() {
       ),
       Card(
         child: ExpansionTile(
-          title: Text('Joburg Bufaloes',style: TextStyle(color: Colors.black),),
+          title: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text('Joburg Bufaloes',style: TextStyle(color: Colors.black),),
+              Text('283-10(54.4)',style: TextStyle(color: Colors.black),),
+            ],
+          ),
           children: [
             Container(
                 height: 30,
