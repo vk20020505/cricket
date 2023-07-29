@@ -1,3 +1,5 @@
+import 'package:cricket/screens/commentary.dart';
+import 'package:cricket/screens/info.dart';
 import 'package:cricket/screens/live.dart';
 import 'package:flutter/material.dart';
 
@@ -70,12 +72,8 @@ class _Screen1State extends State<Screen1> {
        
         body:  TabBarView(children: [
          live(),
-          const Center(
-            child: Text("info"),
-          ),
-          const Center(
-            child: Text("Commentary"),
-          ),
+         info(),
+         commentary(),
           const Center(
             child: Text("Scorecard"),
           ),

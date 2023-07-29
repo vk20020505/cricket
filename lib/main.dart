@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        scaffoldBackgroundColor: Colors.deepPurple,
+        scaffoldBackgroundColor: Colors.grey.shade200,
         
         // primarySwatch: Colors.brown
         
