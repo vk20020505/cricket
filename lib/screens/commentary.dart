@@ -35,9 +35,11 @@ class _commentaryState extends State<commentary> {
                     borderRadius: BorderRadius.circular(40)),
                 elevation: 0.5,
                 child: CircleAvatar(
+                  // child:
+                  //     Text(score['run'], style: const TextStyle(fontSize: 17)),
+                  backgroundColor: Colors.grey.shade200,
                   child:
                       Text(score['run'], style: const TextStyle(fontSize: 17)),
-                  backgroundColor: Colors.grey.shade200,
                 ),
               )),
               DataCell(

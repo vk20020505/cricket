@@ -55,28 +55,7 @@ class _infoState extends State<info> {
         .toList();
   }
 
-  //   List<TableRow> _rows2() {
-  //   return items2
-  //       .map((item) => TableRow(children: [
-  //             Padding(
-  //               padding: const EdgeInsets.all(5),
-  //               child: TableCell(
-  //                   child: Text(
-  //                 item['title'],
-  //                 style: TextStyle(fontSize: 15),
-  //               )),
-  //             ),
-  //             Padding(
-  //               padding: const EdgeInsets.all(5),
-  //               child: TableCell(
-  //                   child: Text(
-  //                 item['content'],
-  //                 style: TextStyle(fontSize: 15),
-  //               )),
-  //             ),
-  //           ]))
-  //       .toList();
-  // }
+
 
   @override
   Widget build(BuildContext context) {
