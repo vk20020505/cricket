@@ -203,7 +203,7 @@ class _infoState extends State<info> {
                 const EdgeInsets.only(top: 25, left: 10, right: 10, bottom: 5),
             child: const Text(
               "Recent Performance",
-              style: TextStyle(fontSize: 20, color: Colors.red),
+              style: TextStyle(fontSize: 20, color: Colors.deepPurple),
             ),
           ),
 

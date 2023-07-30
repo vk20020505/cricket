@@ -92,8 +92,8 @@ class _commentaryState extends State<commentary> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text("End of 24th over"),
-                      Divider(
+                      const Text("End of 24th over"),
+                      const Divider(
                         thickness: 2,
                       ),
                       Container(
