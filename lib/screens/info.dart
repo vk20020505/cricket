@@ -380,27 +380,22 @@ class _infoState extends State<info> {
               style: TextStyle(fontSize: 18, color: Colors.deepPurple),
             ),
           ),
-
           Card(
             elevation: 2,
             child: Container(
-
               padding: const EdgeInsets.all(10),
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10), color: Colors.white),
-
               child: Table(
                 columnWidths: const {
                   0: FlexColumnWidth(0.4),
                   1: FlexColumnWidth(2)
                 },
-
                 children: [TableRow(children: [Table(
                   columnWidths: const {
                     0: FlexColumnWidth(1.4),
                     1: FlexColumnWidth(2)
                   },
-
                   children: _rows(items3),)])],),
             ),
           ),
@@ -411,14 +406,12 @@ class _infoState extends State<info> {
               style: TextStyle(fontSize: 18, color: Colors.deepPurple),
             ),
           ),
-
           Card(
             elevation: 2,
             child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: Table(
                 children: _rows(items2),
-
               ),
             ),
           ),
