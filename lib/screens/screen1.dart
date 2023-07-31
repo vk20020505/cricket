@@ -2,7 +2,9 @@ import 'package:cricket/screens/live.dart';
 import 'package:cricket/screens/scorecard.dart';
 import 'package:flutter/material.dart';
 
+import 'commentry.dart';
 import 'history.dart';
+import 'info.dart';
 class Home extends StatefulWidget {
   const Home({super.key});
 
@@ -74,12 +76,8 @@ class _HomeState extends State<Home> {
         ),
         body:  TabBarView(children: [
          live(),
-          const Center(
-            child: Text("info"),
-          ),
-          const Center(
-            child: Text("Commentary"),
-          ),
+          info(),
+          commentary(),
           Scorecard(),
           history(),
         ]),
