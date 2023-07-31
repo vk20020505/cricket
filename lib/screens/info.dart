@@ -201,7 +201,9 @@ class _infoState extends State<info> {
                   height: 0,
                 ),
                 ListTile(
-                  onTap: (){},
+                  onTap: (){
+
+                  },
                   contentPadding: const EdgeInsets.symmetric(horizontal: 7),
                   title: const Text(
                     "Australia Women",
@@ -225,7 +227,6 @@ class _infoState extends State<info> {
           const SizedBox(
             height: 5,
           ),
-
           Card(
             elevation: 2,
             child: Container(
@@ -248,47 +249,19 @@ class _infoState extends State<info> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Container(
-                          height: 30,
-                          width: 30,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(2),
-                              color: Colors.deepPurple.withOpacity(0.6)),
-                        ),
-                        Container(
-                          height: 30,
-                          width: 30,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(2),
-                              color: Colors.red),
-                        ),
-                        Container(
-                          height: 30,
-                          width: 30,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(2),
-                              color: Colors.red),
-                        ),
-                        Container(
-                          height: 30,
-                          width: 30,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(2),
-                              color: Colors.red),
-                        ),
-                        Container(
-                          height: 30,
-                          width: 30,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(2),
-                              color: Colors.red),
-                        ),
-                        Container(
-                          height: 30,
-                          width: 30,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(2),
-                              color: Colors.red),
+                        ListView.builder(
+                          shrinkWrap: true,
+                          itemCount: 6,
+                          itemBuilder: (context, i) {
+                            return Container(
+                              child: Text(i.toString()),
+                              height: 30,
+                              width: 30,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(2),
+                                  color: Colors.deepPurple.withOpacity(0.6)),
+                            );
+                          },
                         )
                       ],
                     ),
@@ -300,7 +273,6 @@ class _infoState extends State<info> {
           const SizedBox(
             height: 5,
           ),
-
           Card(
             elevation: 2,
             child: Container(
