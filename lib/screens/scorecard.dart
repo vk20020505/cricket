@@ -96,7 +96,7 @@ Widget Scorecard() {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text('Durban Qalandars',style: TextStyle(color: Colors.black),),
-              Text('283-10(54.4)',style: TextStyle(color: Colors.black),),
+              Text('253-10(54.4)',style: TextStyle(color: Colors.black),),
             ],
           ),
            children: [
