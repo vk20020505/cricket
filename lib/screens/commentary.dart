@@ -147,17 +147,17 @@ class _commentaryState extends State<commentary> {
                       DataColumn(
                           label: Text(
                         'Ball',
-                        style: TextStyle(fontSize: 10),
+                        style: TextStyle(fontSize: 17),
                       )),
                       DataColumn(
                           label: Text(
                         'Run',
-                        style: TextStyle(fontSize: 10),
+                        style: TextStyle(fontSize: 17),
                       )),
                       DataColumn(
                           label: Text(
                         'Details',
-                        style: TextStyle(fontSize: 10),
+                        style: TextStyle(fontSize: 17),
                       )),
                     ],
                     rows: _createRows()),

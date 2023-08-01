@@ -1,3 +1,4 @@
+import 'package:cricket/screens/bottomsheet.dart';
 import 'package:flutter/material.dart';
 
 class info extends StatefulWidget {
@@ -31,6 +32,15 @@ class _infoState extends State<info> {
     {'title': 'Referee', 'content': 'Ranjan Madugalle'},
   
   ];
+  dynamic squadDetails(context){
+  return showModalBottomSheet(
+    context: context,
+    useSafeArea: true,
+    isScrollControlled: true,
+     builder:(context){
+      return const squad();
+     } );
+}
 
   List<TableRow> _rows(List param) {
     return param
@@ -167,7 +177,9 @@ class _infoState extends State<info> {
                   borderRadius: BorderRadius.circular(5), color: Colors.white),
               child:  Column(children: [
                 ListTile(
-                  onTap: (){},
+                  onTap: (){
+                    squadDetails(context);
+                  },
                   contentPadding: const EdgeInsets.symmetric(horizontal: 7),
                   title: const Text(
                     "Ireland Women",
@@ -183,7 +195,9 @@ class _infoState extends State<info> {
                   height: 0,
                 ),
                 ListTile(
-                  onTap: (){},
+                   onTap: (){
+                    squadDetails(context);
+                  },
                   contentPadding: const EdgeInsets.symmetric(horizontal: 7),
                   title: const Text(
                     "Australia Women",

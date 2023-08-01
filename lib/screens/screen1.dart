@@ -1,6 +1,7 @@
 import 'package:cricket/screens/commentary.dart';
 import 'package:cricket/screens/info.dart';
 import 'package:cricket/screens/live.dart';
+import 'package:cricket/screens/scoreCard.dart';
 import 'package:flutter/material.dart';
 
 class Screen1 extends StatefulWidget {
@@ -19,6 +20,7 @@ class _Screen1State extends State<Screen1> {
       length: 6,
       child: Scaffold(
         appBar: AppBar(
+          elevation: 0,
           leading: IconButton(
               onPressed: () {}, icon: const Icon(Icons.arrow_back_outlined)),
           title: const Text("SL vs PAK"),
@@ -74,9 +76,7 @@ class _Screen1State extends State<Screen1> {
          live(),
          info(),
          commentary(),
-          const Center(
-            child: Text("Scorecard"),
-          ),
+          Scorecard(),
           const Center(
             child: Text("Chat"),
           ),
