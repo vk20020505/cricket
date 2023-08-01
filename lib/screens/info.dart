@@ -249,20 +249,13 @@ class _infoState extends State<info> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        ListView.builder(
-                          shrinkWrap: true,
-                          itemCount: 6,
-                          itemBuilder: (context, i) {
-                            return Container(
-                              child: Text(i.toString()),
-                              height: 30,
-                              width: 30,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(2),
-                                  color: Colors.deepPurple.withOpacity(0.6)),
-                            );
-                          },
-                        )
+                        Container(
+                          height: 30,
+                          width: 30,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(2),
+                              color: Colors.red),
+                        ),
                       ],
                     ),
                   )

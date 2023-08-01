@@ -69,13 +69,10 @@ class _commentaryState extends State<commentary> {
     ]))
         .toList();
   }
-
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: MediaQuery.sizeOf(context).width,
-      height: MediaQuery.sizeOf(context).height,
-      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+      padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 5),
       child: ListView(
         children: [
           Column(
@@ -85,7 +82,6 @@ class _commentaryState extends State<commentary> {
                   // height: 130,
                   padding: const EdgeInsets.all(10),
                   decoration: const BoxDecoration(
-
                     // borderRadius: BorderRadius.circular(15),
                       color: Colors.white),
                   child: Column(
@@ -133,34 +129,31 @@ class _commentaryState extends State<commentary> {
                   ),
                 ),
               ),
-              Container(
-                padding: const EdgeInsets.all(10),
-                // decoration: BoxDecoration(borderRadius: BorderRadius.circular(10),color: Colors.white),
-                child: DataTable(
-                  // border: TableBorder.all(width: 2),
-                    horizontalMargin: 7,
-                    // decoration: BoxDecoration(borderRadius: BorderRadius.circular(10)),
-                    columnSpacing: 5,
-                    dividerThickness: 2,
-                    columns: const <DataColumn>[
-                      DataColumn(
-                          label: Text(
-                            'Ball',
-                            style: TextStyle(fontSize: 10),
-                          )),
-                      DataColumn(
-                          label: Text(
-                            'Run',
-                            style: TextStyle(fontSize: 10),
-                          )),
-                      DataColumn(
-                          label: Text(
-                            'Details',
-                            style: TextStyle(fontSize: 10),
-                          )),
-                    ],
-                    rows: _createRows()),
-              )
+              DataTable(
+                dataRowMinHeight: 20,
+                // border: TableBorder.all(width: 2),
+                  horizontalMargin: 10,
+                  // decoration: BoxDecoration(borderRadius: BorderRadius.circular(10)),
+                  columnSpacing: 10,
+                  dividerThickness: 2,
+                  columns: const <DataColumn>[
+                    DataColumn(
+                        label: Text(
+                          'Ball',
+                          style: TextStyle(fontSize: 10),
+                        )),
+                    DataColumn(
+                        label: Text(
+                          'Run',
+                          style: TextStyle(fontSize: 10),
+                        )),
+                    DataColumn(
+                        label: Text(
+                          'Details',
+                          style: TextStyle(fontSize: 10),
+                        )),
+                  ],
+                  rows: _createRows())
             ],
           )
         ],
