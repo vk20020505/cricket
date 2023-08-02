@@ -96,7 +96,7 @@ Widget history() {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text('55 Over : 10runs, 1W',style: TextStyle(color: Colors.black),),
-              Text('ENG:283-10)',style: TextStyle(color: Colors.black),),
+              Text('ENG:283-15)',style: TextStyle(color: Colors.black),),
             ],
           ),
           children: [

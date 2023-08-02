@@ -21,7 +21,7 @@ class _HomeState extends State<Home> {
         appBar: AppBar(
           toolbarHeight: 50,
           title: Text(
-            'SL vs PAK',
+            'SL VS PAK',
             style: TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.normal),

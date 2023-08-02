@@ -96,7 +96,7 @@ Widget Scorecard() {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text('Durban Qalandars',style: TextStyle(color: Colors.black),),
-              Text('253-10(54.4)',style: TextStyle(color: Colors.black),),
+              Text('253-10(54.6)',style: TextStyle(color: Colors.black),),
             ],
           ),
            children: [
@@ -193,7 +193,7 @@ Widget Scorecard() {
                                           )),
                                       TableCell(
                                           child: Text(
-                                             "0",
+                                             "5",
                                              style: TextStyle(fontSize: 15,fontStyle: FontStyle.normal, ),
                                           )),
                                       TableCell(
