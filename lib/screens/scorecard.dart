@@ -183,12 +183,12 @@ Widget Scorecard() {
                                           )),
                                       TableCell(
                                           child: Text(
-                                             "0",
+                                             "5",
                                              style: TextStyle(fontSize: 15,fontStyle: FontStyle.normal, ),
                                           )),
                                       TableCell(
                                           child: Text(
-                                             "0",
+                                             "1",
                                              style: TextStyle(fontSize: 15,fontStyle: FontStyle.normal, ),
                                           )),
                                       TableCell(

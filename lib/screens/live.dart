@@ -189,7 +189,7 @@ Widget live() {
                               padding: EdgeInsets.only(left: 10.0),
                               child: TableCell(
                                 child: Text(
-                                  "L'Wkt:2  Crawley :22 (5)",
+                                  "L'Wkt:2  Crawley :22 (6)",
                                   style: TextStyle(fontSize: 15,fontStyle: FontStyle.normal, ),
                                 )),
                             )

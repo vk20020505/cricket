@@ -111,7 +111,7 @@ class _commentaryState extends State<commentary> {
                                     decoration: BoxDecoration(borderRadius: BorderRadius.circular(10),color: Colors.red),
                                     child: Column(
                                         mainAxisAlignment: MainAxisAlignment.center,
-                                        children: [Text("129-1",style: TextStyle(fontSize: 20),),Text("ENG")]),
+                                        children: [Text("129-1",style: TextStyle(fontSize: 20),),Text("BAN")]),
                                   )),
                               Table(
                                 // border: TableBorder.all(width: 2),

@@ -238,7 +238,7 @@ class _infoState extends State<info> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   const Text(
-                    "Sri Lanka",
+                    "Sri Lankaa",
                     style: TextStyle(
                       fontSize: 16,
                     ),
