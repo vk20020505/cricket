@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 
-class BattingCareer extends StatelessWidget {
-  const BattingCareer({super.key});
+class BowlingCareer extends StatelessWidget {
+  const BowlingCareer({super.key});
 
   @override
   Widget build(BuildContext context) {
     List<Map<String, String>> data = [
-      {'title': 'vs MUR,T20 ', 'run': '4(10)'},
-      {'title': 'vs MUR,T20 ', 'run': '4(10)'},
-      {'title': 'vs MUR,T20 ', 'run': '4(10)'},
-      {'title': 'vs MUR,T20 ', 'run': '4(10)'},
-      {'title': 'vs MUR,T20 ', 'run': '4(10)'},
-      {'title': 'vs MUR,T20 ', 'run': '4(10)'},
+      {'title': 'vs MUR,T20 ', 'run': '21-2'},
+      {'title': 'vs MUR,T20 ', 'run': '21-2'},
+      {'title': 'vs MUR,T20 ', 'run': '21-2'},
+      {'title': 'vs MUR,T20 ', 'run': '21-2'},
+      {'title': 'vs MUR,T20 ', 'run': '21-2'},
+      {'title': 'vs MUR,T20 ', 'run': '21-2'},
     ];
 
     List<String> title = [
@@ -32,11 +32,10 @@ class BattingCareer extends StatelessWidget {
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
             child: Container(
                 padding: const EdgeInsets.only(left: 10, right: 10),
-                
                 width: double.maxFinite,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                  
+                  // color: Colors.blue,
                 ),
                 child: Column(
                   children: [
@@ -77,13 +76,11 @@ class BattingCareer extends StatelessWidget {
                         SizedBox(
                           width: double.infinity,
                           height: 60,
-                         
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Container(
                                 width: 80,
-                               
                                 padding:
                                     const EdgeInsets.symmetric(vertical: 10),
                                 child: const Column(
@@ -107,7 +104,7 @@ class BattingCareer extends StatelessWidget {
                                   children: [
                                     Text("18"),
                                     Text(
-                                      "Runs",
+                                      "Inning",
                                       style: TextStyle(fontSize: 15),
                                     )
                                   ],
@@ -123,7 +120,7 @@ class BattingCareer extends StatelessWidget {
                                   children: [
                                     Text("18"),
                                     Text(
-                                      "Innings",
+                                      "Wickets",
                                       style: TextStyle(fontSize: 15),
                                     )
                                   ],
@@ -139,7 +136,7 @@ class BattingCareer extends StatelessWidget {
                                   children: [
                                     Text("18"),
                                     Text(
-                                      "Balls",
+                                      "Economy",
                                       style: TextStyle(fontSize: 15),
                                     )
                                   ],
@@ -173,7 +170,7 @@ class BattingCareer extends StatelessWidget {
                                   children: [
                                     Text("18"),
                                     Text(
-                                      "High Score",
+                                      "Balls",
                                       style: TextStyle(fontSize: 15),
                                     )
                                   ],
@@ -189,23 +186,7 @@ class BattingCareer extends StatelessWidget {
                                   children: [
                                     Text("18"),
                                     Text(
-                                      "100's",
-                                      style: TextStyle(fontSize: 15),
-                                    )
-                                  ],
-                                ),
-                              ),
-                              Container(
-                                width: 80,
-                                // color: Colors.red,
-                                padding:
-                                    const EdgeInsets.symmetric(vertical: 10),
-                                child: const Column(
-                                  mainAxisAlignment: MainAxisAlignment.end,
-                                  children: [
-                                    Text("18"),
-                                    Text(
-                                      "50's",
+                                      "Runs",
                                       style: TextStyle(fontSize: 15),
                                     )
                                   ],
@@ -222,6 +203,22 @@ class BattingCareer extends StatelessWidget {
                                     Text("18"),
                                     Text(
                                       "Average",
+                                      style: TextStyle(fontSize: 15),
+                                    )
+                                  ],
+                                ),
+                              ),
+                              Container(
+                                width: 80,
+                                // color: Colors.red,
+                                padding:
+                                    const EdgeInsets.symmetric(vertical: 10),
+                                child: const Column(
+                                  mainAxisAlignment: MainAxisAlignment.end,
+                                  children: [
+                                    Text("18"),
+                                    Text(
+                                      "BBI",
                                       style: TextStyle(fontSize: 15),
                                     )
                                   ],
@@ -248,7 +245,7 @@ class BattingCareer extends StatelessWidget {
                             children: [
                               Text("18"),
                               Text(
-                                "Not Out",
+                                "BBM",
                                 style: TextStyle(fontSize: 15),
                               ),
                             ],
@@ -263,7 +260,7 @@ class BattingCareer extends StatelessWidget {
                             children: [
                               Text("18"),
                               Text(
-                                "6's",
+                                "5'Wkts",
                                 style: TextStyle(fontSize: 15),
                               )
                             ],
@@ -278,7 +275,7 @@ class BattingCareer extends StatelessWidget {
                             children: [
                               Text("18"),
                               Text(
-                                "4's",
+                                "10'Wkts",
                                 style: TextStyle(fontSize: 15),
                               )
                             ],
@@ -293,7 +290,7 @@ class BattingCareer extends StatelessWidget {
                             children: [
                               Text("18"),
                               Text(
-                                "Strike Rate",
+                                "Maidens",
                                 style: TextStyle(fontSize: 15),
                               )
                             ],

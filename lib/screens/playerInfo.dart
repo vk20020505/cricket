@@ -14,6 +14,8 @@ class PlayerInfo extends StatelessWidget {
       {'title': 'Bowling Style', 'content': 'Right Arm OffBreak'},
     ];
 
+    List<String> teamsName = ["North-West Warriors", "Ireland", 'Norway'];
+
     List<TableRow> _rows(List param) {
       return param
           .map((item) => TableRow(children: [
@@ -37,14 +39,14 @@ class PlayerInfo extends StatelessWidget {
           .toList();
     }
 
-    return Container(
+    return Padding(
+      // height: double.infinity,
       padding: const EdgeInsets.symmetric(horizontal: 10),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+      child: Wrap(
         children: [
           Container(
             padding:
-                const EdgeInsets.only(top: 10, left: 7, right: 10, bottom: 10),
+                const EdgeInsets.only(top: 15, left: 7, right: 10, bottom: 10),
             child: const Text(
               "Personal information",
               style: TextStyle(fontSize: 20, color: Colors.red),
@@ -76,36 +78,26 @@ class PlayerInfo extends StatelessWidget {
           Card(
             child: Container(
               width: double.maxFinite,
-              height: 80,
+              // height: 80,
               padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 15),
-              child: Row(
-                // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Container(
-                    padding: const EdgeInsets.all(7),
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15),
-                        border: Border.all(width: 1.5)),
-                    child: const Text(
-                      "North-West Warriors",
-                      style: TextStyle(fontSize: 17),
-                    ),
+              child: Wrap(
+                runSpacing: 5,
+                spacing: 15,
+                  // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: teamsName.map(
+                (name) => Container(
+                  
+              
+                  padding: const EdgeInsets.all(7),
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15),
+                      border: Border.all(width: 1.5)),
+                  child: Text(
+                    name,
+                    style: const TextStyle(fontSize: 17),
                   ),
-                  const SizedBox(
-                    width: 10,
-                  ),
-                  Container(
-                    padding: const EdgeInsets.all(7),
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15),
-                        border: Border.all(width: 1.5)),
-                    child: const Text(
-                      "Ireland",
-                      style: TextStyle(fontSize: 17),
-                    ),
-                  )
-                ],
-              ),
+                ),
+              ).toList()),
             ),
           ),
           Container(
@@ -138,23 +130,3 @@ class PlayerInfo extends StatelessWidget {
   }
 }
 
-
-
-Widget bowlingCareer() {
-  return Container(
-    // height: 100,
-    padding: const EdgeInsets.symmetric(horizontal: 15),
-    child: Column(
-      children: [
-        Container(
-          padding:
-              const EdgeInsets.only(top: 20, left: 10, right: 10, bottom: 10),
-          child: const Text(
-            "Personal information",
-            style: TextStyle(fontSize: 20, color: Colors.red),
-          ),
-        ),
-      ],
-    ),
-  );
-}

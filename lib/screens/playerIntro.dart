@@ -1,4 +1,5 @@
 import 'package:cricket/screens/battingCareer.dart';
+import 'package:cricket/screens/bowlingCareer.dart';
 import 'package:cricket/screens/playerInfo.dart';
 import 'package:flutter/material.dart';
 
@@ -20,12 +21,13 @@ class _IntroPageState extends State<IntroPage> {
           body: CustomScrollView(
             slivers: [
               SliverAppBar(
-                backgroundColor: Colors.transparent,
+                // backgroundColor: Colors.transparent,
                 collapsedHeight: 140,
                 pinned: true,
                 // floating: true,
                 expandedHeight: 240,
                 flexibleSpace: FlexibleSpaceBar(
+                  // collapseMode: CollapseMode.none,
                     background: Image.asset(
                   'assets/images/pic1.png',
                   fit: BoxFit.cover,
@@ -52,7 +54,7 @@ class _IntroPageState extends State<IntroPage> {
                             height: 40,
                             // width: 120,
                             
-                            padding: EdgeInsets.symmetric(horizontal:20,vertical: 5),
+                            padding: const EdgeInsets.symmetric(horizontal:20,vertical: 5),
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(20),
                                 color: Colors.blue),
@@ -66,7 +68,7 @@ class _IntroPageState extends State<IntroPage> {
                           Container(
                             height: 40,
                             // width: 120,
-                            padding: EdgeInsets.symmetric(horizontal:20,vertical: 5),
+                            padding: const EdgeInsets.symmetric(horizontal:20,vertical: 5),
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(20),
                                 color: Colors.blue),
@@ -79,7 +81,7 @@ class _IntroPageState extends State<IntroPage> {
                           ),
                           Container(
                             height: 40,
-                           padding: EdgeInsets.symmetric(horizontal:20,vertical: 5),
+                           padding: const EdgeInsets.symmetric(horizontal:20,vertical: 5),
                             // width: 120,
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(20),
@@ -95,9 +97,9 @@ class _IntroPageState extends State<IntroPage> {
                       ]),
                     )),
               ),
-              SliverFillRemaining(
+              const SliverFillRemaining(
                 child: TabBarView(
-                    children: [PlayerInfo(), BattingCarrer(), bowlingCareer()]),
+                    children: [PlayerInfo(), BattingCareer(), BowlingCareer()]),
               )
             ],
           ),
