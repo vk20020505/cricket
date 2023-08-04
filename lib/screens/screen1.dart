@@ -1,4 +1,5 @@
 import 'package:cricket/screens/commentary.dart';
+import 'package:cricket/screens/history.dart';
 import 'package:cricket/screens/info.dart';
 import 'package:cricket/screens/live.dart';
 import 'package:cricket/screens/scoreCard.dart';
@@ -15,9 +16,8 @@ class _Screen1State extends State<Screen1> {
   //  var w = MediaQuery.sizeOf(context).width;
   @override
   Widget build(BuildContext context) {
-    
     return DefaultTabController(
-      length: 6,
+      length: 5,
       child: Scaffold(
         appBar: AppBar(
           elevation: 0,
@@ -57,12 +57,6 @@ class _Screen1State extends State<Screen1> {
               ),
               Tab(
                 child: Text(
-                  "Chat",
-                  style: TextStyle(fontSize: 20),
-                ),
-              ),
-              Tab(
-                child: Text(
                   "History",
                   style: TextStyle(fontSize: 20),
                 ),
@@ -71,19 +65,8 @@ class _Screen1State extends State<Screen1> {
             isScrollable: true,
           ),
         ),
-       
-        body:  TabBarView(children: [
-         live(),
-         info(),
-         commentary(),
-          Scorecard(),
-          const Center(
-            child: Text("Chat"),
-          ),
-          const Center(
-            child: Text("History"),
-          ),
-        ]),
+        body: TabBarView(
+            children: [live(), info(), commentary(), Scorecard(), History()]),
       ),
     );
   }

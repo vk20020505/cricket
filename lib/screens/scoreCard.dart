@@ -195,6 +195,7 @@ class _ScorecardState extends State<Scorecard> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
+        
           padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
           child: ListView(children: [
             Table(
@@ -253,9 +254,9 @@ class _ScorecardState extends State<Scorecard> {
                   borderRadius: BorderRadius.circular(10)),
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10)),
-              maintainState: true,
-              iconColor: Colors.white,
-              collapsedIconColor: Colors.white,
+              // maintainState: true,
+              // iconColor: Colors.white,
+              // collapsedIconColor: Colors.white,
               title: const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [

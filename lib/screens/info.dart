@@ -23,24 +23,22 @@ class _infoState extends State<info> {
     {'title': 'Stadium', 'content': 'Kenning Oval, london England'},
     {'title': 'City', 'content': 'London'},
     {'title': 'Capacity', 'content': '23500'},
-  
   ];
 
-   List<Map<dynamic, dynamic>> items3 = [
+  List<Map<dynamic, dynamic>> items3 = [
     {'title': 'Umpire', 'content': 'Jeol Wilson, kumar Dharmasena'},
     {'title': '3rd Umpire', 'content': 'Nitin Menon'},
     {'title': 'Referee', 'content': 'Ranjan Madugalle'},
-  
   ];
-  dynamic squadDetails(context){
-  return showModalBottomSheet(
-    context: context,
-    useSafeArea: true,
-    isScrollControlled: true,
-     builder:(context){
-      return const squad();
-     } );
-}
+  dynamic squadDetails(context) {
+    return showModalBottomSheet(
+        context: context,
+        useSafeArea: true,
+        isScrollControlled: true,
+        builder: (context) {
+          return const squad();
+        });
+  }
 
   List<TableRow> _rows(List param) {
     return param
@@ -64,8 +62,6 @@ class _infoState extends State<info> {
             ]))
         .toList();
   }
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -109,52 +105,15 @@ class _infoState extends State<info> {
           Card(
             elevation: 2,
             child: Container(
-             
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(5), color: Colors.white),
               padding: const EdgeInsets.all(20),
               child: Table(
-             
                 columnWidths: const {
                   0: FlexColumnWidth(0.9),
                   1: FlexColumnWidth(2)
                 },
                 children: _rows(items),
-                // children: const[ TableRow(children:
-                //  [Padding(
-                //    padding: EdgeInsets.only(top:8),
-                //    child: TableCell(
-                //      verticalAlignment: TableCellVerticalAlignment.bottom,
-                //      child: Text("Series",style: TextStyle(fontSize: 17),)),
-                //  ),Padding(
-                //    padding: EdgeInsets.only(top:8),
-
-                //    child: TableCell(
-                //     verticalAlignment: TableCellVerticalAlignment.bottom,
-                //     child: Text("Australia women tour of ireland",style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold))),
-                //  )]
-                //   ),
-                //   TableRow(children:
-                //  [TableCell(child: Text("Match",style: TextStyle(fontSize: 17),)),TableCell(child: Text("Ireland Women Vs Australia Women",style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold)))]
-                //   ),
-                //   TableRow(children:
-                //  [TableCell(child: Text("Match No",style: TextStyle(fontSize: 17),)),TableCell(child: Text("3rd ODI Match",style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold)))]
-                //   ),
-                //   TableRow(children:
-                //  [TableCell(child: Text("Date",style: TextStyle(fontSize: 17),)),TableCell(child: Text("Fri,28 Jul",style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold)))]
-                //   ),
-                //   TableRow(children:
-                //  [TableCell(child: Text("Time",style: TextStyle(fontSize: 17),)),TableCell(child: Text("3:15 PM, Your Time",style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold)))]
-                //   ),
-                //   TableRow(children:
-                //  [TableCell(child: Text("Venue",style: TextStyle(fontSize: 17),)),TableCell(child: Text("Castle Avenue, Dublin, Ireland,united states of america",style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold)))]
-                //   ),
-                //   TableRow(children:
-                //  [TableCell(
-                //   //  verticalAlignment: TableCellVerticalAlignment.bottom,
-                //    child: Text("Toss",style: TextStyle(fontSize: 17),)),TableCell(child: Text("Australia Women opt to Bowl",style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold)))]
-                //   ),
-                //   ],
               ),
             ),
           ),
@@ -175,9 +134,9 @@ class _infoState extends State<info> {
               padding: const EdgeInsets.symmetric(horizontal: 7),
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(5), color: Colors.white),
-              child:  Column(children: [
+              child: Column(children: [
                 ListTile(
-                  onTap: (){
+                  onTap: () {
                     squadDetails(context);
                   },
                   contentPadding: const EdgeInsets.symmetric(horizontal: 7),
@@ -195,7 +154,7 @@ class _infoState extends State<info> {
                   height: 0,
                 ),
                 ListTile(
-                   onTap: (){
+                  onTap: () {
                     squadDetails(context);
                   },
                   contentPadding: const EdgeInsets.symmetric(horizontal: 7),
@@ -246,50 +205,17 @@ class _infoState extends State<info> {
                     height: 40,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Container(
+                      children: List<Widget>.generate(
+                        6,
+                        (int index) => Container(
                           height: 30,
                           width: 30,
                           decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(2),
-                              color: Colors.red),
+                              borderRadius: BorderRadius.circular(5),
+                              color: Colors.amber.shade200,
+                              border: Border.all(width: 2, color: Colors.red)),
                         ),
-                        Container(
-                          height: 30,
-                          width: 30,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(2),
-                              color: Colors.red),
-                        ),
-                        Container(
-                          height: 30,
-                          width: 30,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(2),
-                              color: Colors.red),
-                        ),
-                        Container(
-                          height: 30,
-                          width: 30,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(2),
-                              color: Colors.red),
-                        ),
-                        Container(
-                          height: 30,
-                          width: 30,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(2),
-                              color: Colors.red),
-                        ),
-                        Container(
-                          height: 30,
-                          width: 30,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(2),
-                              color: Colors.red),
-                        )
-                      ],
+                      ),
                     ),
                   )
                 ],
@@ -321,50 +247,17 @@ class _infoState extends State<info> {
                     height: 40,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Container(
+                      children: List<Widget>.generate(
+                        6,
+                        (int index) => Container(
                           height: 30,
                           width: 30,
                           decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(2),
-                              color: Colors.red),
+                              borderRadius: BorderRadius.circular(5),
+                              color: Colors.amber.shade200,
+                              border: Border.all(width: 2, color: Colors.red)),
                         ),
-                        Container(
-                          height: 30,
-                          width: 30,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(2),
-                              color: Colors.red),
-                        ),
-                        Container(
-                          height: 30,
-                          width: 30,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(2),
-                              color: Colors.red),
-                        ),
-                        Container(
-                          height: 30,
-                          width: 30,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(2),
-                              color: Colors.red),
-                        ),
-                        Container(
-                          height: 30,
-                          width: 30,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(2),
-                              color: Colors.red),
-                        ),
-                        Container(
-                          height: 30,
-                          width: 30,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(2),
-                              color: Colors.red),
-                        )
-                      ],
+                      ),
                     ),
                   )
                 ],
@@ -384,24 +277,36 @@ class _infoState extends State<info> {
           Card(
             elevation: 2,
             child: Container(
-              
               padding: const EdgeInsets.all(10),
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10), color: Colors.white),
-                  
-                  child: Table(
-                  columnWidths: const {
-                  0: FlexColumnWidth(0.4),
-                  1: FlexColumnWidth(2)
-                },
-                   
-                    children: [TableRow(children: [const TableCell(child:Text('icon')),Table(
-                      columnWidths: const {
+              child: Table(
+                columnWidths: const {
                   0: FlexColumnWidth(1.4),
                   1: FlexColumnWidth(2)
                 },
-                      
-                      children: _rows(items3),)])],),
+                children: _rows(items3),
+              ),
+              // child: Table(
+              //   columnWidths: const {
+              //     0: FlexColumnWidth(0.4),
+              //     1: FlexColumnWidth(2)
+              //   },
+              //   children: [
+              //     TableRow(
+              //       children: [
+              //         const TableCell(child: Text('icon')),
+              // Table(
+              //   columnWidths: const {
+              //     0: FlexColumnWidth(1.4),
+              //     1: FlexColumnWidth(2)
+              //   },
+              //   children: _rows(items3),
+              // ),
+              //       ],
+              //     ),
+              //   ],
+              // ),
             ),
           ),
           Container(
