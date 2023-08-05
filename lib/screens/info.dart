@@ -43,22 +43,22 @@ class _infoState extends State<info> {
   List<TableRow> _rows(List param) {
     return param
         .map((item) => TableRow(children: [
-              Padding(
-                padding: const EdgeInsets.all(5),
-                child: TableCell(
+              TableCell(
+                  child: Padding(
+                    padding: const EdgeInsets.all(5.0),
                     child: Text(
-                  item['title'],
-                  style: const TextStyle(fontSize: 17),
-                )),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(5),
-                child: TableCell(
+                                  item['title'],
+                                  style: const TextStyle(fontSize: 17),
+                                ),
+                  )),
+              TableCell(
+                  child: Padding(
+                    padding: const EdgeInsets.all(5.0),
                     child: Text(
-                  item['content'],
-                  style: const TextStyle(fontSize: 17),
-                )),
-              ),
+                                  item['content'],
+                                  style: const TextStyle(fontSize: 17),
+                                ),
+                  )),
             ]))
         .toList();
   }

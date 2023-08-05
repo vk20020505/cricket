@@ -21,6 +21,7 @@ class _IntroPageState extends State<IntroPage> {
           body: CustomScrollView(
             slivers: [
               SliverAppBar(
+            
                 // backgroundColor: Colors.transparent,
                 collapsedHeight: 140,
                 pinned: true,

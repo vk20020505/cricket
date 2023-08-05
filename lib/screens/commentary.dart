@@ -51,120 +51,189 @@ class _commentaryState extends State<commentary> {
   List<TableRow> _rows(List param) {
     return param
         .map((item) => TableRow(children: [
-              Padding(
-                padding: const EdgeInsets.all(5),
-                child: TableCell(
-                    child: Text(
+              TableCell(
+                  child: Padding(
+                padding: const EdgeInsets.all(5.0),
+                child: Text(
                   item['title'],
                   style: const TextStyle(fontSize: 17),
-                )),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(5),
-                child: TableCell(
-                    child: Text(
+                ),
+              )),
+              TableCell(
+                  child: Padding(
+                padding: const EdgeInsets.all(5.0),
+                child: Text(
                   item['content'],
                   style: const TextStyle(fontSize: 17),
-                )),
-              ),
+                ),
+              )),
             ]))
         .toList();
   }
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: MediaQuery.sizeOf(context).width,
-      height: MediaQuery.sizeOf(context).height,
-      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-      child: ListView(
-        children: [
-          Column(
-            children: [
-              Card(
-                child: Container(
-                  // height: 130,
-                  padding: const EdgeInsets.all(10),
-                  decoration: const BoxDecoration(
+    return Scaffold(
+      appBar: AppBar(
+        elevation: 0,
+        foregroundColor: Colors.black,
+        toolbarHeight: 90,
+        backgroundColor: Colors.blue.shade50,
+        automaticallyImplyLeading: false,
+        title: Table(
+          columnWidths: const {
+            0:FlexColumnWidth(.3),
+            1:FlexColumnWidth(.4),
+             2:FlexColumnWidth(.3),
 
-                      // borderRadius: BorderRadius.circular(15),
-                      color: Colors.white),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Text("End of 24th over"),
-                      const Divider(
-                        thickness: 2,
-                      ),
-                      Container(
-                        padding: const EdgeInsets.all(5),
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            color: Colors.white),
-                        child: Table(
-                          // border: TableBorder.all(width: 2),
-                          columnWidths: const {
-                            0: FlexColumnWidth(0.7),
-                            1: FlexColumnWidth(1.7)
-                          },
-                          children: [
-                            TableRow(children: [
-                               TableCell(
-                                verticalAlignment: TableCellVerticalAlignment.middle,
-                                child: Container(height: 80,
-                               width: 20,
-                               decoration: BoxDecoration(borderRadius: BorderRadius.circular(10),color: Colors.red),
-                               child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [Text("129-1",style: TextStyle(fontSize: 20),),Text("ENG")]),
-                               )),
-                              Table(
-                                // border: TableBorder.all(width: 2),
-                                columnWidths: const {
-                                  0: FlexColumnWidth(1.4),
-                                  1: FlexColumnWidth(1.5)
-                                },
-                                children: _rows(items3),
-                              )
-                            ])
-                          ],
+          },
+          // border: TableBorder.all(width: 2),
+            children: const [
+              TableRow(children: [
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      // mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        CircleAvatar(),
+                        Padding(
+                          padding: EdgeInsets.only(left:13),
+                          child: Text(
+                            "17-1",
+                            style: TextStyle(fontSize: 20,),
+                          ),
+                        )
+                      ],
+                    ),
+                    Text("Colombo")
+                  ],
+                ),
+                TableCell(
+                    verticalAlignment: TableCellVerticalAlignment.middle,
+                    child: Icon(Icons.currency_exchange)),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    Row(
+                      // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.only(right:14.0),
+                          child: Text(
+                            "192-6",
+                            style: TextStyle(fontSize: 20),
+                          ),
                         ),
-                      ),
-                    ],
+                        CircleAvatar()
+                      ],
+                    ),
+                    Text("Dambulla")
+                  ],
+                ),
+              ])
+            ],
+          ),),
+      
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 10,),
+        child: ListView(
+          children: [
+            Column(
+              children: [
+                Card(
+                  child: Container(
+                    // height: 130,
+                    padding: const EdgeInsets.all(10),
+                    decoration: const BoxDecoration(
+      
+                        // borderRadius: BorderRadius.circular(15),
+                        color: Colors.white),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Text("End of 24th over"),
+                        const Divider(
+                          thickness: 2,
+                        ),
+                        Container(
+                          padding: const EdgeInsets.all(5),
+                          child: Table(
+                            // border: TableBorder.all(width: 2),
+                            columnWidths: const {
+                              0: FlexColumnWidth(0.7),
+                              1: FlexColumnWidth(1.7)
+                            },
+                            children: [
+                              TableRow(children: [
+                                TableCell(
+                                    verticalAlignment:
+                                        TableCellVerticalAlignment.middle,
+                                    child: Container(
+                                      height: 80,
+                                      width: 20,
+                                      decoration: BoxDecoration(
+                                          borderRadius: BorderRadius.circular(10),
+                                          color: Colors.red),
+                                      child: const Column(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          children: [
+                                            Text(
+                                              "129-1",
+                                              style: TextStyle(fontSize: 20),
+                                            ),
+                                            Text("ENG")
+                                          ]),
+                                    )),
+                                Table(
+                                  // border: TableBorder.all(width: 2),
+                                  columnWidths: const {
+                                    0: FlexColumnWidth(1.4),
+                                    1: FlexColumnWidth(1.5)
+                                  },
+                                  children: _rows(items3),
+                                )
+                              ])
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
-              ),
-              Container(
-                padding: const EdgeInsets.all(10),
-                // decoration: BoxDecoration(borderRadius: BorderRadius.circular(10),color: Colors.white),
-                child: DataTable(
-                    // border: TableBorder.all(width: 2),
-                    horizontalMargin: 7,
-                    // decoration: BoxDecoration(borderRadius: BorderRadius.circular(10)),
-                    columnSpacing: 5,
-                    dividerThickness: 2,
-                    columns: const <DataColumn>[
-                      DataColumn(
-                          label: Text(
-                        'Ball',
-                        style: TextStyle(fontSize: 17),
-                      )),
-                      DataColumn(
-                          label: Text(
-                        'Run',
-                        style: TextStyle(fontSize: 17),
-                      )),
-                      DataColumn(
-                          label: Text(
-                        'Details',
-                        style: TextStyle(fontSize: 17),
-                      )),
-                    ],
-                    rows: _createRows()),
-              )
-            ],
-          )
-        ],
+                Container(
+                  padding: const EdgeInsets.all(10),
+                  // decoration: BoxDecoration(borderRadius: BorderRadius.circular(10),color: Colors.white),
+                  child: DataTable(
+                      // border: TableBorder.all(width: 2),
+                      horizontalMargin: 7,
+                      // decoration: BoxDecoration(borderRadius: BorderRadius.circular(10)),
+                      columnSpacing: 5,
+                      dividerThickness: 2,
+                      columns: const <DataColumn>[
+                        DataColumn(
+                            label: Text(
+                          'Ball',
+                          style: TextStyle(fontSize: 17),
+                        )),
+                        DataColumn(
+                            label: Text(
+                          'Run',
+                          style: TextStyle(fontSize: 17),
+                        )),
+                        DataColumn(
+                            label: Text(
+                          'Details',
+                          style: TextStyle(fontSize: 17),
+                        )),
+                      ],
+                      rows: _createRows()),
+                )
+              ],
+            )
+          ],
+        ),
       ),
     );
   }

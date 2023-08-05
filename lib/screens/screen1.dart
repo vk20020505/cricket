@@ -2,6 +2,7 @@ import 'package:cricket/screens/commentary.dart';
 import 'package:cricket/screens/history.dart';
 import 'package:cricket/screens/info.dart';
 import 'package:cricket/screens/live.dart';
+import 'package:cricket/screens/pointTable.dart';
 import 'package:cricket/screens/scoreCard.dart';
 import 'package:flutter/material.dart';
 
@@ -17,7 +18,7 @@ class _Screen1State extends State<Screen1> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 5,
+      length: 6,
       child: Scaffold(
         appBar: AppBar(
           elevation: 0,
@@ -30,6 +31,7 @@ class _Screen1State extends State<Screen1> {
             // IconButton(onPressed: () {}, icon: const Icon(Icons.more_vert))
           ],
           bottom: const TabBar(
+            indicatorColor: Colors.white,
             tabs: [
               Tab(
                 child: Text(
@@ -61,12 +63,18 @@ class _Screen1State extends State<Screen1> {
                   style: TextStyle(fontSize: 20),
                 ),
               ),
+               Tab(
+                child: Text(
+                  "Points Table",
+                  style: TextStyle(fontSize: 20),
+                ),
+              ),
             ],
             isScrollable: true,
           ),
         ),
         body: TabBarView(
-            children: [live(), info(), commentary(), Scorecard(), History()]),
+            children: [live(), info(), commentary(), Scorecard(), History(),PointTable()]),
       ),
     );
   }
